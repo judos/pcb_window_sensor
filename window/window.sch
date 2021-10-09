@@ -1,0 +1,309 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATmega:ATmega328P-AU U1
+U 1 1 60809005
+P 2550 3400
+F 0 "U1" H 2550 1811 50  0000 C CNN
+F 1 "ATmega328P-AU" H 2550 1720 50  0000 C CNN
+F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 2550 3400 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 2550 3400 50  0001 C CNN
+	1    2550 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 6080B162
+P 1100 3350
+F 0 "BT1" H 1218 3446 50  0000 L CNN
+F 1 "Battery_Cell" H 1218 3355 50  0000 L CNN
+F 2 "Battery:BatteryHolder_MPD_BC2003_1x2032" V 1100 3410 50  0001 C CNN
+F 3 "~" V 1100 3410 50  0001 C CNN
+	1    1100 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J3
+U 1 1 6080CD1C
+P 4000 1100
+F 0 "J3" H 4080 1092 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 4080 1001 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4000 1100 50  0001 C CNN
+F 3 "~" H 4000 1100 50  0001 C CNN
+	1    4000 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x03 J1
+U 1 1 6080EDB8
+P 3000 1100
+F 0 "J1" H 3080 1142 50  0000 L CNN
+F 1 "Screw_Terminal_01x03" H 3080 1051 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 3000 1100 50  0001 C CNN
+F 3 "~" H 3000 1100 50  0001 C CNN
+	1    3000 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 3150 1100 1100
+Wire Wire Line
+	1100 1100 2800 1100
+Wire Wire Line
+	2800 1200 2700 1200
+Wire Wire Line
+	2700 1200 2700 1350
+Wire Wire Line
+	2700 1350 3450 1350
+Wire Wire Line
+	3450 1350 3450 1100
+Wire Wire Line
+	3450 1100 3800 1100
+Wire Wire Line
+	3800 1200 3550 1200
+Wire Wire Line
+	3550 1200 3550 1650
+Wire Wire Line
+	3550 1650 3250 1650
+Wire Wire Line
+	2550 1650 2550 1800
+Wire Wire Line
+	2650 1900 2650 1800
+Wire Wire Line
+	2650 1800 2550 1800
+Connection ~ 2550 1800
+Wire Wire Line
+	2550 1800 2550 1900
+Wire Wire Line
+	2550 4900 1100 4900
+Wire Wire Line
+	1100 4900 1100 3450
+$Comp
+L Device:Crystal Y1
+U 1 1 60813E8C
+P 3600 2900
+F 0 "Y1" H 3600 3168 50  0000 C CNN
+F 1 "Crystal" H 3600 3077 50  0000 C CNN
+F 2 "Crystal:Crystal_HC49-4H_Vertical" H 3600 2900 50  0001 C CNN
+F 3 "~" H 3600 2900 50  0001 C CNN
+	1    3600 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 2900 3150 2900
+Wire Wire Line
+	3150 2800 3750 2800
+Wire Wire Line
+	3750 2800 3750 2900
+$Comp
+L Device:C C1
+U 1 1 60816162
+P 3450 3050
+F 0 "C1" H 3565 3096 50  0000 L CNN
+F 1 "C" H 3565 3005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 3488 2900 50  0001 C CNN
+F 3 "~" H 3450 3050 50  0001 C CNN
+	1    3450 3050
+	1    0    0    -1  
+$EndComp
+Connection ~ 3450 2900
+$Comp
+L Device:C C2
+U 1 1 60816C4B
+P 3750 3050
+F 0 "C2" H 3865 3096 50  0000 L CNN
+F 1 "C" H 3865 3005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 3788 2900 50  0001 C CNN
+F 3 "~" H 3750 3050 50  0001 C CNN
+	1    3750 3050
+	1    0    0    -1  
+$EndComp
+Connection ~ 3750 2900
+Wire Wire Line
+	3450 3200 3750 3200
+Wire Wire Line
+	3450 3200 3450 4900
+Wire Wire Line
+	3450 4900 2550 4900
+Connection ~ 3450 3200
+Connection ~ 2550 4900
+$Comp
+L Transistor_FET:2N7000 Q1
+U 1 1 60819094
+P 4500 3350
+F 0 "Q1" H 4704 3396 50  0000 L CNN
+F 1 "2N7000" H 4704 3305 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4700 3275 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF" H 4500 3350 50  0001 L CNN
+	1    4500 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 6081DA2B
+P 4050 3350
+F 0 "R2" V 3843 3350 50  0000 C CNN
+F 1 "R" V 3934 3350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3980 3350 50  0001 C CNN
+F 3 "~" H 4050 3350 50  0001 C CNN
+	1    4050 3350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 6081EABD
+P 4050 3750
+F 0 "R3" V 3843 3750 50  0000 C CNN
+F 1 "R" V 3934 3750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3980 3750 50  0001 C CNN
+F 3 "~" H 4050 3750 50  0001 C CNN
+	1    4050 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4200 3350 4300 3350
+Wire Wire Line
+	4600 3550 4600 3750
+Wire Wire Line
+	4600 3750 4200 3750
+Wire Wire Line
+	3150 2200 3900 2200
+Wire Wire Line
+	3900 2200 3900 3350
+Connection ~ 3900 3350
+Wire Wire Line
+	3900 3350 3900 3750
+Wire Wire Line
+	4600 3750 4600 4900
+Wire Wire Line
+	4600 4900 3450 4900
+Connection ~ 4600 3750
+Connection ~ 3450 4900
+$Comp
+L Device:Buzzer BZ1
+U 1 1 60821FA9
+P 4950 2700
+F 0 "BZ1" H 5102 2729 50  0000 L CNN
+F 1 "Buzzer" H 5102 2638 50  0000 L CNN
+F 2 "Buzzer_Beeper:Buzzer_CUI_CPT-9019S-SMT" V 4925 2800 50  0001 C CNN
+F 3 "~" V 4925 2800 50  0001 C CNN
+	1    4950 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 2800 4600 2800
+Wire Wire Line
+	4600 2800 4600 3150
+Wire Wire Line
+	4850 2600 4150 2600
+Wire Wire Line
+	4150 2600 4150 1650
+Wire Wire Line
+	4150 1650 3550 1650
+Connection ~ 3550 1650
+$Comp
+L Connector:AVR-ISP-6 J2
+U 1 1 60824B40
+P 3800 5900
+F 0 "J2" H 3471 5996 50  0000 R CNN
+F 1 "AVR-ISP-6" H 3471 5905 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" V 3550 5950 50  0001 C CNN
+F 3 " ~" H 2525 5350 50  0001 C CNN
+	1    3800 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 5400 3700 4200
+Wire Wire Line
+	3700 3400 3250 3400
+Wire Wire Line
+	3250 3400 3250 1650
+Connection ~ 3250 1650
+Wire Wire Line
+	3250 1650 2550 1650
+Wire Wire Line
+	3700 6300 2550 6300
+Wire Wire Line
+	2550 6300 2550 4900
+Wire Wire Line
+	4200 6000 5100 6000
+Wire Wire Line
+	5100 6000 5100 3900
+Wire Wire Line
+	5100 3900 3900 3900
+Wire Wire Line
+	3500 3900 3500 3700
+Wire Wire Line
+	3500 3700 3150 3700
+$Comp
+L Device:R R1
+U 1 1 6082C72F
+P 3900 4050
+F 0 "R1" H 3830 4004 50  0000 R CNN
+F 1 "R" H 3830 4095 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3830 4050 50  0001 C CNN
+F 3 "~" H 3900 4050 50  0001 C CNN
+	1    3900 4050
+	-1   0    0    1   
+$EndComp
+Connection ~ 3900 3900
+Wire Wire Line
+	3900 3900 3500 3900
+Wire Wire Line
+	3900 4200 3700 4200
+Connection ~ 3700 4200
+Wire Wire Line
+	3700 4200 3700 3400
+Wire Wire Line
+	4200 5700 4200 4350
+Wire Wire Line
+	4200 4350 5300 4350
+Wire Wire Line
+	5300 4350 5300 3000
+Wire Wire Line
+	5300 3000 3950 3000
+Wire Wire Line
+	3950 3000 3950 2600
+Wire Wire Line
+	3950 2600 3150 2600
+Wire Wire Line
+	3150 2500 4000 2500
+Wire Wire Line
+	4000 2500 4000 2950
+Wire Wire Line
+	4000 2950 5350 2950
+Wire Wire Line
+	5350 2950 5350 4400
+Wire Wire Line
+	5350 4400 4250 4400
+Wire Wire Line
+	4250 4400 4250 5800
+Wire Wire Line
+	4250 5800 4200 5800
+Wire Wire Line
+	4200 5900 4300 5900
+Wire Wire Line
+	4300 5900 4300 4450
+Wire Wire Line
+	4300 4450 5400 4450
+Wire Wire Line
+	5400 4450 5400 2900
+Wire Wire Line
+	5400 2900 4050 2900
+Wire Wire Line
+	4050 2900 4050 2700
+Wire Wire Line
+	4050 2700 3150 2700
+$EndSCHEMATC
